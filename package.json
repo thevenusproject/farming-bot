@@ -10,11 +10,19 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "HTTPS=true react-scripts start",
+    "stop": "taskkill -F -IM node.exe",
+    "lint": "eslint --ext .jsx .",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "use-project": "firebase use farmingbottvp",
+    "deploy": "firebase deploy --only hosting:farmingbottvp"
   },
   "eslintConfig": {
     "extends": "react-app"
