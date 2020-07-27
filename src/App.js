@@ -11,36 +11,74 @@ function App() {
     <div className={classes.root}>
       <Grid
         container
-        spacing={3}
+        spacing={4}
         direction="column"
         justify="center"
         alignItems="center"
       >
-        <Paper className={classes.paper}>
-          <Grid xs={12} sm container>
-            <Grid item xs={12}>
-              <img
-                src={process.env.REACT_APP_STREAM_URL}
-                className={classes.stream}
-                alt="stream"
-              />
-            </Grid>
-            <Grid item xs={12} sm container>
-              <Grid item xs>
-                <Typography gutterBottom align="left" variant="subtitle1">
-                  Farming Bot Project • Bird's view
-                </Typography>
-
-                <Typography variant="body2" align="left" gutterBottom>
-                  Location: <a href="https://goo.gl/maps/P5f2FcpkudDC6knSA" target="_blank">TVP Visitor Center</a> - Venus, Florida, USA
-                </Typography>
+        <Grid item>
+          <Paper className={classes.paper}>
+            <Typography gutterBottom align="left" variant="h2">
+              Farming Bot Project
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item>
+          <Paper className={classes.paper}>
+            <Typography variant="body2" align="left" color="textSecondary">
+              Project Status: Plot preparation
+            </Typography>
+            <Typography variant="body2" align="left" gutterBottom>
+              Location:{" "}
+              <a
+                href="https://goo.gl/maps/P5f2FcpkudDC6knSA"
+                target="_blank"
+              >
+                TVP Visitor Center
+              </a>{" "}
+              - Venus, Florida, USA
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item>
+          <Paper className={classes.paper}>
+            <Grid xs={12} sm container>
+              <Grid item xs={12} sm>
                 <Typography variant="body2" align="left" color="textSecondary">
-                  Stage: Plot preparation
+                  Live Camera #1 - Bird's eye view
                 </Typography>
               </Grid>
+              <Grid item xs={12}>
+                <img
+                  src={process.env.REACT_APP_STREAM_URL}
+                  className={classes.stream}
+                  alt="stream"
+                />
+              </Grid>
             </Grid>
-          </Grid>
-        </Paper>
+          </Paper>
+        </Grid>
+        <Grid item>
+          <Paper className={classes.paper}>
+            <Grid container>
+              <Grid item xs>
+                <Typography gutterBottom align="left" variant="subtitle1">
+                  Dashboard
+                </Typography>
+                <Typography variant="body2" align="left" gutterBottom color="textSecondary">
+                  Status: Under Construction
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <img
+                  src={"dashboard.png"}
+                  className={classes.image}
+                  alt="dashboard"
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
       </Grid>
     </div>
   );
@@ -59,8 +97,12 @@ const useStyles = makeStyles(theme => ({
     margin: "auto"
   },
   stream: {
+    margin: theme.spacing(2),
     height: 320,
     width: 640
+  },
+  image: {
+    width: "100%",
   }
 }));
 
