@@ -4,6 +4,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+// import {Delete, ArrowLeft, ArrowRight, ArrowDownward, ArrowUpward, ArrowLeftSharp} from '@material-ui/icons';
+import ArrowBack from "@material-ui/icons/ArrowBack";
+import ArrowForward from "@material-ui/icons/ArrowForward";
+import ArrowDownward from "@material-ui/icons/ArrowDownward";
+import ArrowUpward from "@material-ui/icons/ArrowUpward";
 
 function App() {
   const classes = useStyles();
@@ -25,18 +31,15 @@ function App() {
         </Grid>
         <Grid item>
           <Paper className={classes.paper}>
-            <Typography variant="body2" align="left" color="textSecondary">
-              Project Status: Plot preparation
-            </Typography>
             <Typography variant="body2" align="left" gutterBottom>
               Location:{" "}
-              <a
-                href="https://goo.gl/maps/P5f2FcpkudDC6knSA"
-                target="_blank"
-              >
+              <a href="https://goo.gl/maps/P5f2FcpkudDC6knSA" target="_blank">
                 TVP Visitor Center
               </a>{" "}
               - Venus, Florida, USA
+            </Typography>
+            <Typography variant="body2" align="left" color="textSecondary">
+              Project Status: Plot preparation
             </Typography>
           </Paper>
         </Grid>
@@ -44,8 +47,11 @@ function App() {
           <Paper className={classes.paper}>
             <Grid xs={12} sm container>
               <Grid item xs={12} sm>
+                <Typography gutterBottom align="left" variant="subtitle1">
+                  Live Camera #1
+                </Typography>
                 <Typography variant="body2" align="left" color="textSecondary">
-                  Live Camera #1 - Bird's eye view
+                  Bird's eye view
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -55,6 +61,44 @@ function App() {
                   alt="stream"
                 />
               </Grid>
+              <Grid item>
+                <Typography variant="body2" align="left" variant="subtitle1">
+                  Controls: ⚠️ Under construction ⚠️
+                </Typography>
+              </Grid>
+              <Grid container direction="column" alignItems="center" xs={12}>
+                <Grid container xs={2}>
+                  <Grid item xs={4}></Grid>
+                  <Grid item xs={4}>
+                    <IconButton disabled aria-label="up">
+                      <ArrowUpward />
+                    </IconButton>
+                  </Grid>
+                  <Grid item xs={4}></Grid>
+                </Grid>
+                <Grid container xs={2}>
+                  <Grid item xs={4}>
+                    <IconButton disabled aria-label="left">
+                      <ArrowBack />
+                    </IconButton>
+                  </Grid>
+                  <Grid item xs={4}></Grid>
+                  <Grid item xs={4}>
+                    <IconButton disabled aria-label="right">
+                      <ArrowForward />
+                    </IconButton>
+                  </Grid>
+                </Grid>
+                <Grid container xs={2}>
+                  <Grid item xs={4}></Grid>
+                  <Grid item xs={4}>
+                    <IconButton disabled aria-label="down">
+                      <ArrowDownward />
+                    </IconButton>
+                  </Grid>
+                  <Grid item xs={4}></Grid>
+                </Grid>
+              </Grid>
             </Grid>
           </Paper>
         </Grid>
@@ -63,10 +107,7 @@ function App() {
             <Grid container>
               <Grid item xs>
                 <Typography gutterBottom align="left" variant="subtitle1">
-                  Dashboard
-                </Typography>
-                <Typography variant="body2" align="left" gutterBottom color="textSecondary">
-                  Status: Under Construction
+                  Dashboard: ⚠️ Under Construction ⚠️
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -102,7 +143,7 @@ const useStyles = makeStyles(theme => ({
     width: 640
   },
   image: {
-    width: "100%",
+    width: "100%"
   }
 }));
 
