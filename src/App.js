@@ -56,7 +56,7 @@ function App() {
                 - Venus, Florida, USA
               </Typography>
               <Typography variant="body2" align="left" color="textSecondary">
-                Project Status: Plot preparation
+                Project Status: Plot preparation ⛏
               </Typography>
             </Paper>
           </Grid>
