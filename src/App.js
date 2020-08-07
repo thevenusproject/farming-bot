@@ -55,8 +55,18 @@ function App() {
                 </a>{" "}
                 - Venus, Florida, USA
               </Typography>
-              <Typography variant="body2" align="left" color="textSecondary">
+              <Typography variant="body2" align="left" color="textSecondary" gutterBottom>
                 Project Status: Plot preparation ⛏
+              </Typography>
+              <Typography variant="body2" align="left" gutterBottom>
+                <a href="https://alchemy-2-rinkeby.herokuapp.com/dao/0x365e8c20f57f5acc97a7ed0125d4f4fd41a221a9/" target="_blank">
+                  Participation portal #1
+                </a>
+              </Typography>
+              <Typography variant="body2" align="left" gutterBottom>
+                <a href="https://rinkeby.aragon.org/#/tvpdaotest/" target="_blank">
+                  Participation portal #2
+                </a>
               </Typography>
             </Paper>
           </Grid>
